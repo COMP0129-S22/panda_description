@@ -58,7 +58,7 @@
 	<!--
 	ROBOT CONTROL PUBLISHERS
 	-->
-	<node name="state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+	<!--<node name="state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>-->
     <node name="joint_state_desired_publisher" pkg="topic_tools" type="relay" args="joint_states joint_states_desired" />
 
 	
