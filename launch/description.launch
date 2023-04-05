@@ -7,7 +7,9 @@
 	<!-- The name of the parameter under which the URDF is loaded -->
 	<arg name="robot_description" default="robot_description"/>
 	<arg name="rvizconfig" 		  default="$(find panda_description)/rviz/urdf.rviz" />
-	<arg name="custom_gazebo_world"      default="$(find panda_description)/sdf/empty_panda.world" />
+	<!-- <arg name="custom_gazebo_world"      default="$(find panda_description)/sdf/empty_panda.world" /> -->
+	<arg name="custom_gazebo_world"      default="$(find panda_description)/sdf/empty_panda_noShadow.world" />
+
 	<arg name="camera_name"      default="r200" />
 	<arg name="verbose"					default="false"/>
 	
@@ -121,6 +123,6 @@
      -->
   	<param 
 		name="robot_description_semantic" 
-		command="$(find xacro)/xacro --inorder '$(arg robot_srdf_xacro)'"
+		command="$(find xacro)/xacro '$(arg robot_srdf_xacro)'"
 	/>
 </launch>
